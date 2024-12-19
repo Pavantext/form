@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #333333;
+}
+
+.container {
+    background-image: url('../images/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    background-color: #333333;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h4, h5 {
+    margin: 10px 0;
+}
+
+input[type="radio"] {
+    margin: 5px 10px;
+}
+
+button[type="submit"] {
+    background-color: burlywood;
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #deb887;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        background-attachment: fixed;
+        padding: 10px;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        width: 90%;
+    }
+}

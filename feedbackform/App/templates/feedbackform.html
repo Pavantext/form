@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+        
+    <div class="container">
+        
+        <section>
+            <h4>Please fill the form below</h4>
+            <br>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <h5>Have you booked entry passes online?</h5>
+                <input type="radio" name="entry_passes" value="yes">Yes
+                <input type="radio" name="entry_passes" value="no">No
+                <h5>Have you attended "Arjitha Seva?"</h2>
+                <input type="radio" name="seva" value="yes">Yes
+                <input type="radio" name="seva" value="no">No
+                <h5>Have you attended "Nithya Seva Kainkaryam?"</h2>
+                <input type="radio" name="nithya_seva" value="yes">Yes
+                <input type="radio" name="nithya_seva" value="no">No
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <br>
+        <footer>
+            <p>Copyright &copy; 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
