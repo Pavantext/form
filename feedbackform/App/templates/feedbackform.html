@@ -13,47 +13,23 @@
     <div class="container">
         
         <section>
-            <h4>Please fill the form below</h4>
+            <h4>Thank you for visiting the Statue of Equality, please take 1 minute survey to share </h4>
             <br>
             <form action="" method="post">
                 {% csrf_token %}
                 {{form.as_p}}
-                <h5>Have you booked entry passes online?</h5>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" name="entry_passes" value="yes" id="entry-yes">
-                        <label for="entry-yes">Yes</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" name="entry_passes" value="no" id="entry-no">
-                        <label for="entry-no">No</label>
-                    </div>
+                <div>
+                    <h4>Temple Services</h2>
+                    <h5>Deity decoration and priest Services</h5>
+                    <h4>Have you attended "Arjitha Seva?"</h2>
+                    <input type="radio" name="seva" value="yes">Yes
+                    <input type="radio" name="seva" value="no">No
+                    <h4>Have you attended "Nithya Seva Kainkaryam?"</h2>
+                    <input type="radio" name="nithya_seva" value="yes">Yes
+                    <input type="radio" name="nithya_seva" value="no">No
+                    
                 </div>
-
-                <h5>Have you attended "Arjitha Seva?"</h5>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" name="seva" value="yes" id="seva-yes">
-                        <label for="seva-yes">Yes</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" name="seva" value="no" id="seva-no">
-                        <label for="seva-no">No</label>
-                    </div>
-                </div>
-
-                <h5>Have you attended "Nithya Seva Kainkaryam?"</h5>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" name="nithya_seva" value="yes" id="nithya-yes">
-                        <label for="nithya-yes">Yes</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" name="nithya_seva" value="no" id="nithya-no">
-                        <label for="nithya-no">No</label>
-                    </div>
-                </div>
-                <br>
+                
                 <button type="submit">Submit</button>
             </form>
         </section>
