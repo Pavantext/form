@@ -23,9 +23,10 @@ body {
 h1 {
     color: whitesmoke;
     text-align: center;
-    background-color: #333333;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
-    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
 }
 
 section {
@@ -46,8 +47,25 @@ h4, h5 {
     margin: 10px 0;
 }
 
+.radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 input[type="radio"] {
-    margin: 5px 10px;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
 
 button[type="submit"] {
@@ -91,5 +109,10 @@ footer {
 
     button[type="submit"] {
         width: 90%;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
     }
 }
