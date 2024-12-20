@@ -13,37 +13,289 @@
     <div class="container">
         
         <section>
-            <h4>Thank you for visiting the Statue of Equality, please take 1 minute survey to share </h4>
+            <h2>Thank you for visiting the Statue of Equality, please take 1 minute survey to share </h2>
             <br>
             <form action="" method="post">
                 {% csrf_token %}
                 {{form.as_p}}
                 <div>
-                    <h4>Temple Services</h2>
+                    <h3>Temple Services</h3>
                     <h5>Deity decoration and priest Services</h5>
                     <div class="stars">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5" title="5 stars">&#9733;</label>
+                        <input type="radio" id="deity-star5" name="deity_rating" value="5">
+                        <label for="deity-star5" title="5 stars">&#9733;</label>
                         
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4" title="4 stars">&#9733;</label>
+                        <input type="radio" id="deity-star4" name="deity_rating" value="4">
+                        <label for="deity-star4" title="4 stars">&#9733;</label>
                         
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3" title="3 stars">&#9733;</label>
+                        <input type="radio" id="deity-star3" name="deity_rating" value="3">
+                        <label for="deity-star3" title="3 stars">&#9733;</label>
                         
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2" title="2 stars">&#9733;</label>
+                        <input type="radio" id="deity-star2" name="deity_rating" value="2">
+                        <label for="deity-star2" title="2 stars">&#9733;</label>
                         
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1" title="1 star">&#9733;</label>
-                      </div>
+                        <input type="radio" id="deity-star1" name="deity_rating" value="1">
+                        <label for="deity-star1" title="1 star">&#9733;</label>
+                    </div>
                     <h5>Tilak (naamam) experience</h5>
-                    <h4>Have you attended "Arjitha Seva?"</h2>
-                    <input type="radio" name="seva" value="yes">Yes
+                    <div class="stars">
+                        <input type="radio" id="tilak-star5" name="tilak_rating" value="5">
+                        <label for="tilak-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="tilak-star4" name="tilak_rating" value="4">
+                        <label for="tilak-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="tilak-star3" name="tilak_rating" value="3">
+                        <label for="tilak-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="tilak-star2" name="tilak_rating" value="2">
+                        <label for="tilak-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="tilak-star1" name="tilak_rating" value="1">
+                        <label for="tilak-star1" title="1 star">&#9733;</label>
+                      </div>
+                    <h3>speacial Events</h3>
+                    <h5>Dancing water show (leela jala neeraajanam)</h5>
+                    <div class="stars">
+                        <input type="radio" id="leela-star5" name="leela_rating" value="5">
+                        <label for="leela-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="leela-star4" name="leela_rating" value="4">
+                        <label for="leela-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="leela-star3" name="leela_rating" value="3">
+                        <label for="leela-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="leela-star2" name="leela_rating" value="2">
+                        <label for="leela-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="leela-star1" name="leela_rating" value="1">
+                        <label for="leela-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h5>Haarathi offered to Bhagavad Ramanujacharya (samatha neeraajanam)</h5>
+                    <div class="stars">
+                        <input type="radio" id="samatha-star5" name="samatha_rating" value="5">
+                        <label for="samatha-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="samatha-star4" name="samatha_rating" value="4">
+                        <label for="samatha-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="samatha-star3" name="samatha_rating" value="3">
+                        <label for="samatha-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="samatha-star2" name="samatha_rating" value="2">
+                        <label for="samatha-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="samatha-star1" name="samatha_rating" value="1">
+                        <label for="samatha-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h3>Amenities and facilities</h3>
+                    <h5>Deposit and collection process of your belongings - Phone, Luggage, Footwear, etc</h5>
+                    <div class="stars">
+                        <input type="radio" id="deposit-star5" name="deposit_rating" value="5">
+                        <label for="deposit-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="deposit-star4" name="deposit_rating" value="4">
+                        <label for="deposit-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="deposit-star3" name="deposit_rating" value="3">
+                        <label for="deposit-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="deposit-star2" name="deposit_rating" value="2">
+                        <label for="deposit-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="deposit-star1" name="deposit_rating" value="1">
+                        <label for="deposit-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h5>Drinking water facility</h5>
+                    <div class="stars">
+                        <input type="radio" id="water-star5" name="water_rating" value="5">
+                        <label for="water-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="water-star4" name="water_rating" value="4">
+                        <label for="water-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="water-star3" name="water_rating" value="3">
+                        <label for="water-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="water-star2" name="water_rating" value="2">
+                        <label for="water-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="water-star1" name="water_rating" value="1">
+                        <label for="water-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Wash rooms / Toilet facility</h5>
+                    <div class="stars">
+                        <input type="radio" id="wash-star5" name="wash_rating" value="5">
+                        <label for="wash-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="wash-star4" name="wash_rating" value="4">
+                        <label for="wash-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="wash-star3" name="wash_rating" value="3">
+                        <label for="wash-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="wash-star2" name="wash_rating" value="2">
+                        <label for="wash-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="wash-star1" name="wash_rating" value="1">
+                        <label for="wash-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Accessibility (Wheelchairs / elevators / steps)</h5>
+                    <div class="stars">
+                        <input type="radio" id="accessibility-star5" name="accessibility_rating" value="5">
+                        <label for="accessibility-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="accessibility-star4" name="accessibility_rating" value="4">
+                        <label for="accessibility-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="accessibility-star3" name="accessibility_rating" value="3">
+                        <label for="accessibility-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="accessibility-star2" name="accessibility_rating" value="2">
+                        <label for="accessibility-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="accessibility-star1" name="accessibility_rating" value="1">
+                        <label for="accessibility-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Ease of parking, Parking Area</h5>
+                    <div class="stars">
+                        <input type="radio" id="parking-star5" name="parking_rating" value="5">
+                        <label for="parking-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="parking-star4" name="parking_rating" value="4">
+                        <label for="parking-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="parking-star3" name="parking_rating" value="3">
+                        <label for="parking-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="parking-star2" name="parking_rating" value="2">
+                        <label for="parking-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="parking-star1" name="parking_rating" value="1">
+                        <label for="parking-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Food court , Food options, Ambience, Quality and taste</h5>
+                    <div class="stars">
+                        <input type="radio" id="food-star5" name="food_rating" value="5">
+                        <label for="food-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="food-star4" name="food_rating" value="4">
+                        <label for="food-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="food-star3" name="food_rating" value="3">
+                        <label for="food-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="food-star2" name="food_rating" value="2">
+                        <label for="food-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="food-star1" name="food_rating" value="1">
+                        <label for="food-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Shopping area</h5>
+                    <div class="stars">
+                        <input type="radio" id="shopping-star5" name="shopping_rating" value="5">
+                        <label for="shopping-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="shopping-star4" name="shopping_rating" value="4">
+                        <label for="shopping-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="shopping-star3" name="shopping_rating" value="3">
+                        <label for="shopping-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="shopping-star2" name="shopping_rating" value="2">
+                        <label for="shopping-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="shopping-star1" name="shopping_rating" value="1">
+                        <label for="shopping-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>Kid's entertainment area</h5>
+                    <div class="stars">
+                        <input type="radio" id="kids-star5" name="kids_rating" value="5">
+                        <label for="kids-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="kids-star4" name="kids_rating" value="4">
+                        <label for="kids-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="kids-star3" name="kids_rating" value="3">
+                        <label for="kids-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="kids-star2" name="kids_rating" value="2">
+                        <label for="kids-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="kids-star1" name="kids_rating" value="1">
+                        <label for="kids-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h3>Ticketing</h3>
+                    <h5>Entry pass area and the ease of security entry passes (online ticketing, Kiosk, ticket counters)</h5>
+                    <div class="stars">
+                        <input type="radio" id="entry-star5" name="entry_rating" value="5">
+                        <label for="entry-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="entry-star4" name="entry_rating" value="4">
+                        <label for="entry-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="entry-star3" name="entry_rating" value="3">
+                        <label for="entry-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="entry-star2" name="entry_rating" value="2">
+                        <label for="entry-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="entry-star1" name="entry_rating" value="1">
+                        <label for="entry-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h3>Directions</h3>
+                    <h5>Ease of access and sign board directions within the campus</h5>
+                    <div class="stars">
+                        <input type="radio" id="directions-star5" name="directions_rating" value="5">
+                        <label for="directions-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="directions-star4" name="directions_rating" value="4">
+                        <label for="directions-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="directions-star3" name="directions_rating" value="3">
+                        <label for="directions-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="directions-star2" name="directions_rating" value="2">
+                        <label for="directions-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="directions-star1" name="directions_rating" value="1">
+                        <label for="directions-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <h3>Overall Experience</h3>
+                    <h5>Authenticity, architecture, ambience and aesthetics</h5>
+                    <div class="stars">
+                        <input type="radio" id="overall-star5" name="overall_rating" value="5">
+                        <label for="overall-star5" title="5 stars">&#9733;</label>
+                        
+                        <input type="radio" id="overall-star4" name="overall_rating" value="4">
+                        <label for="overall-star4" title="4 stars">&#9733;</label>
+                        
+                        <input type="radio" id="overall-star3" name="overall_rating" value="3">
+                        <label for="overall-star3" title="3 stars">&#9733;</label>
+                        
+                        <input type="radio" id="overall-star2" name="overall_rating" value="2">
+                        <label for="overall-star2" title="2 stars">&#9733;</label>
+                        
+                        <input type="radio" id="overall-star1" name="overall_rating" value="1">
+                        <label for="overall-star1" title="1 star">&#9733;</label>
+                    </div>
+                    
+                    <h5>We would love to hear feedback in your own words too</h5>
+                    <textarea name="feedback" id="feedback" cols="30" rows="5"></textarea>
+                    <h5>Do you want us to reach you? Please share your contact details</h5>
+                    <textarea name="contact" id="contact" cols="30" rows="5"></textarea>
+                    <!-- <input type="radio" name="seva" value="yes">Yes
                     <input type="radio" name="seva" value="no">No
                     <h4>Have you attended "Nithya Seva Kainkaryam?"</h2>
                     <input type="radio" name="nithya_seva" value="yes">Yes
-                    <input type="radio" name="nithya_seva" value="no">No
+                    <input type="radio" name="nithya_seva" value="no">No -->
                     
                 </div>
                 

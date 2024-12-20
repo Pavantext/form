@@ -47,10 +47,41 @@ h4, h5 {
     margin: 10px 0;
 }
 
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
 
+.stars input {
+    display: none;
+}
 
+.stars label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
 
+.stars input:checked ~ label,
+.stars input:checked ~ label ~ label {
+  color: #f39c12;
+  text-shadow: 0 0 20px #f39c12;
+}
 
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #f39c12;
+  transform: matrix(1.2);
+  text-shadow: 0 0 15px #f39c12;
+}
+
+textarea {
+    background: transparent;
+}
 
 button[type="submit"] {
     background-color: burlywood;
