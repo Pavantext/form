@@ -3,19 +3,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'images/favicon.ico' %}">
-    <title>Document</title>
+    <title>Feedback Form</title>
 </head>
 <body>
-    <h1>Feedback Form</h1>
+    
         
     <div class="container">
-        
+        <h1><img src="{% static 'images/logo.png' %}" alt="favicon" width="90" height="90"></h1> 
+        <br>
         <section>
-            <h2>Thank you for visiting the Statue of Equality, please take 1 minute survey to share </h2>
-            <br>
+            <h2>Thank you for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+            <div id="rating-guide">
+                <h4>Rating Guide</h4>
+                <div class="rating-items">
+                    <div class="rating-item">
+                        <span class="stars-display">★</span>
+                        <span class="rating-text">Poor</span>
+                    </div>
+                    <div class="rating-item">
+                        <span class="stars-display">★★</span>
+                        <span class="rating-text">Fair</span>
+                    </div>
+                    <div class="rating-item">
+                        <span class="stars-display">★★★</span>
+                        <span class="rating-text">Good</span>
+                    </div>
+                    <div class="rating-item">
+                        <span class="stars-display">★★★★</span>
+                        <span class="rating-text">Very Good</span>
+                    </div>
+                    <div class="rating-item">
+                        <span class="stars-display">★★★★★</span>
+                        <span class="rating-text">Excellent</span>
+                    </div>
+                </div>
+            </div>
+            
             {% if messages %}
                 <div class="messages">
                     {% for message in messages %}
@@ -41,7 +67,7 @@
                 {% csrf_token %}
                 <!-- {{form.as_p}} -->
                 <div>
-                    <h3>Temple Services</h3>
+                    <h3>1. Temple Services:</h3>
                     <h5>Deity decoration and priest Services</h5>
                     <div class="stars">
                         <input type="radio" id="deity-star5" name="deity_rating" value="5">
@@ -76,7 +102,7 @@
                         <input type="radio" id="tilak-star1" name="tilak_rating" value="1">
                         <label for="tilak-star1" title="1 star">&#9733;</label>
                       </div>
-                    <h3>speacial Events</h3>
+                    <h3>2. Speacial Events:</h3>
                     <h5>Dancing water show (leela jala neeraajanam)</h5>
                     <div class="stars">
                         <input type="radio" id="leela-star5" name="leela_rating" value="5">
@@ -111,7 +137,7 @@
                         <input type="radio" id="samatha-star1" name="samatha_rating" value="1">
                         <label for="samatha-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>Amenities and facilities</h3>
+                    <h3>3. Amenities and facilities</h3>
                     <h5>Deposit and collection process of your belongings - Phone, Luggage, Footwear, etc</h5>
                     <div class="stars">
                         <input type="radio" id="deposit-star5" name="deposit_rating" value="5">
@@ -254,7 +280,7 @@
                         <input type="radio" id="kids-star1" name="kids_rating" value="1">
                         <label for="kids-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>Ticketing</h3>
+                    <h3>4. Ticketing:</h3>
                     <h5>Entry pass area and the ease of security entry passes (online ticketing, Kiosk, ticket counters)</h5>
                     <div class="stars">
                         <input type="radio" id="entry-star5" name="entry_rating" value="5">
@@ -272,7 +298,7 @@
                         <input type="radio" id="entry-star1" name="entry_rating" value="1">
                         <label for="entry-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>Directions</h3>
+                    <h3>5. Directions:</h3>
                     <h5>Ease of access and sign board directions within the campus</h5>
                     <div class="stars">
                         <input type="radio" id="directions-star5" name="directions_rating" value="5">
@@ -290,7 +316,7 @@
                         <input type="radio" id="directions-star1" name="directions_rating" value="1">
                         <label for="directions-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>Overall Experience</h3>
+                    <h3>6. Overall Experience</h3>
                     <h5>Authenticity, architecture, ambience and aesthetics</h5>
                     <div class="stars">
                         <input type="radio" id="overall-star5" name="overall_rating" value="5">

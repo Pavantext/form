@@ -1,14 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     color: whitesmoke;
+    box-sizing: border-box;
     text-align: center;
 }
 
 body {
     min-height: 100vh;
     background-color: #333333;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -17,7 +19,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -27,6 +30,69 @@ h1 {
     padding: 15px;
     position: sticky;
     top: 0;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    display: flex;
+    font-size: 18px;
+}
+
+#rating-guide {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 10px auto;
+    max-width: 280px;
+}
+
+#rating-guide h4 {
+    color: #dda035;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.rating-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+}
+
+.stars-display {
+    color: #f39c12;
+    font-size: 0.8em;
+    letter-spacing: -2px;
+}
+
+.rating-text {
+    color: whitesmoke;
+    font-size: 0.7em;
+}
+
+@media screen and (max-width: 768px) {
+    #rating-guide {
+        max-width: 240px;
+        padding: 6px;
+    }
+    
+    .stars-display {
+        letter-spacing: -3px;
+    }
+}
+
+span {
+    color: #f39c12;
 }
 
 section {
@@ -35,6 +101,9 @@ section {
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
 }
 
 form {
@@ -51,8 +120,8 @@ h4, h5 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 5px;
+    margin: 15px 0;
 }
 
 .stars input {
@@ -60,7 +129,7 @@ h4, h5 {
 }
 
 .stars label {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ccc;
     cursor: pointer;
     transition: color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
@@ -68,8 +137,8 @@ h4, h5 {
 
 .stars input:checked ~ label,
 .stars input:checked ~ label ~ label {
-  color: #f39c12;
-  text-shadow: 0 0 20px #f39c12;
+  color: #dda035;
+  text-shadow: 0 0 20px #dda035;
 }
 
 .stars label:hover,
@@ -81,18 +150,22 @@ h4, h5 {
 
 textarea {
     background: transparent;
+    width: 100%;
+    max-width: 100%;
+    min-height: 44px;
 }
 
 button[type="submit"] {
-    background-color: burlywood;
+    background-color: #dda035;
     width: 70%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+    min-height: 44px;
 }
 
 button[type="submit"]:hover {
@@ -105,7 +178,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Mobile Responsive Design */
+
 @media screen and (max-width: 768px) {
     .container {
         background-attachment: fixed;
@@ -132,7 +205,36 @@ footer {
     }
 }
 
-/* Message styling */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .stars label {
+        font-size: 2rem;
+    }
+}
+
 .messages {
     width: 100%;
     margin: 10px 0;
@@ -155,7 +257,6 @@ footer {
     border: 1px solid #dc3545;
 }
 
-/* Animation for messages */
 @keyframes slideIn {
     from {
         transform: translateY(-100%);
@@ -167,7 +268,7 @@ footer {
     }
 }
 
-/* Add fade-out animation */
+
 .alert {
     animation: fadeOut 0.5s ease-out 5s forwards;
 }
@@ -179,5 +280,40 @@ footer {
     to {
         opacity: 0;
         display: none;
+    }
+}
+
+/* Fix for iOS input zoom */
+input, select, textarea {
+    font-size: 16px !important;
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make form elements more touch-friendly */
+button[type="submit"] {
+    min-height: 44px;
+    padding: 12px 20px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 44px;
+}
+
+/* Improve spacing for mobile */
+.stars {
+    margin: 15px 0;
+}
+
+/* Fix for mobile Safari */
+@supports (-webkit-touch-callout: none) {
+    .container {
+        min-height: -webkit-fill-available;
     }
 }
