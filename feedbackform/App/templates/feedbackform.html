@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
     <title>Document</title>
 </head>
 <body>
@@ -15,6 +16,27 @@
         <section>
             <h2>Thank you for visiting the Statue of Equality, please take 1 minute survey to share </h2>
             <br>
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            {% if form.errors %}
+                <div class="alert alert-error">
+                    Please correct the following errors:
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                            <li>{{ field|title }}: {{ errors|first }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            
             <form action="" method="post">
                 {% csrf_token %}
                 <!-- {{form.as_p}} -->
@@ -307,5 +329,25 @@
             <p>Copyright &copy; 2024</p>
         </footer>
     </div>
+    <script>
+        // Auto-dismiss messages after 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const messages = document.querySelectorAll('.alert');
+                messages.forEach(function(message) {
+                    message.style.display = 'none';
+                });
+            }, 5000);
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const ratings = document.querySelectorAll('input[type="radio"]:checked');
+            if (ratings.length < 15) { // We have 15 rating categories
+                e.preventDefault();
+                alert('Please provide ratings for all categories before submitting.');
+            }
+        });
+    </script>
 </body>
 </html>
