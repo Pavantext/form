@@ -11,10 +11,12 @@ def feedback_form(request):
         form = FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, '🙏 Thank you for your feedback!')
-            return redirect('feedback_form')
+            return redirect('thank_you')
         else:
             messages.error(request, '❌ Please fill in all required ratings before submitting.')
     else:
         form = FeedbackForm()
     return render(request, 'feedbackform.html', {'form': form})
+
+def thank_you(request):
+    return render(request, 'thankyou.html')

@@ -224,3 +224,86 @@ footer {
         max-width: 250px;
     }
 }
+
+/* Thank you page styles */
+.thank-you-section {
+    text-align: center;
+    padding: 50px 20px !important;
+}
+
+.thank-you-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.thank-you-section p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #dda035;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: fadeInUp 2s ease-out;
+}
+
+.back-button:hover {
+    background-color: #f39c12;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(221, 160, 53, 0.3);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .thank-you-section h2 {
+        font-size: 1.5em;
+    }
+    
+    .thank-you-section p {
+        font-size: 1em;
+    }
+}
