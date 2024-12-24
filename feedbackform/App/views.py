@@ -7,7 +7,7 @@ from .forms import FeedbackForm
 def feedback_form(request):
     
     if request.method == 'POST':
-        form = FeedbackForm()
+       
         form = FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
