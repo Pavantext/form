@@ -10,7 +10,6 @@
 </head>
 <body>
     
-        
     <div class="container">
         
         <section>
@@ -353,29 +352,8 @@
             </form>
         </section>
         <br>
-        <footer>
-            <p>Copyright &copy; 2024</p>
-        </footer>
+        
     </div>
-    <script>
-        // Auto-dismiss messages after 5 seconds
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                const messages = document.querySelectorAll('.alert');
-                messages.forEach(function(message) {
-                    message.style.display = 'none';
-                });
-            }, 5000);
-        });
-
-        // Form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            const ratings = document.querySelectorAll('input[type="radio"]:checked');
-            if (ratings.length < 15) { // We have 15 rating categories
-                e.preventDefault();
-                alert('Please provide ratings for all categories before submitting.');
-            }
-        });
-    </script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

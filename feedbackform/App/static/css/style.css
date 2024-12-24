@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
 }
 
 body {
@@ -10,6 +9,53 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: backgroundZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(221, 160, 53, 0.2),
+        rgba(0, 0, 0, 0.7)
+    );
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
@@ -19,6 +65,18 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     padding: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
@@ -41,6 +99,12 @@ section {
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
@@ -306,4 +370,73 @@ footer {
     .thank-you-section p {
         font-size: 1em;
     }
+}
+
+/* Social media styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-out;
+}
+
+.social-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(221, 160, 53, 0.3);
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #dda035;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.social-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Add a bounce animation for social icons */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.social-link:hover img {
+    animation: bounce 0.8s ease infinite;
 }
