@@ -13,7 +13,12 @@
     <div class="container">
         
         <section>
-            <h2>Thank you for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+            {% if username %}
+                <h2>Thank You {{ username }}, for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+            {% else %}
+                <h2>Thank you for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+            {% endif %}
+            
             <div id="rating-guide">
                 <h4>Rating Guide</h4>
                 <div class="rating-items">
@@ -63,6 +68,8 @@
             
             <form action="" method="post">
                 {% csrf_token %}
+                <input type="hidden" name="username" value="{{ username }}">
+                <input type="hidden" name="phone_number" value="{{ phone_number }}">
                 <!-- {{form.as_p}} -->
                 <div>
                     <h3>1. Temple Services:</h3>

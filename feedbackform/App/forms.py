@@ -6,6 +6,10 @@ class FeedbackForm(forms.ModelForm):
         model = Feedback
         fields = '__all__'
         exclude = ['created_at']
+        widgets = {
+            'username': forms.HiddenInput(),
+            'phone_number': forms.HiddenInput(),
+        }
 
     def clean(self):
         cleaned_data = super().clean()

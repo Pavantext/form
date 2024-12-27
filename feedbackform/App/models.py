@@ -6,6 +6,9 @@ from django.utils import timezone
 
 
 class Feedback(models.Model):
+    username = models.CharField(max_length=100, blank=True, null=True)
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+
     deity_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     tilak_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
