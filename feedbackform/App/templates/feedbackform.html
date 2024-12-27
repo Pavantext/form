@@ -66,78 +66,111 @@
                 <!-- {{form.as_p}} -->
                 <div>
                     <h3>1. Temple Services:</h3>
-                    <h5>Deity decoration and priest Services</h5>
-                    <div class="stars">
-                        <input type="radio" id="deity-star5" name="deity_rating" value="5">
-                        <label for="deity-star5" title="5 stars">&#9733;</label>
-                        
-                        <input type="radio" id="deity-star4" name="deity_rating" value="4">
-                        <label for="deity-star4" title="4 stars">&#9733;</label>
-                        
-                        <input type="radio" id="deity-star3" name="deity_rating" value="3">
-                        <label for="deity-star3" title="3 stars">&#9733;</label>
-                        
-                        <input type="radio" id="deity-star2" name="deity_rating" value="2">
-                        <label for="deity-star2" title="2 stars">&#9733;</label>
-                        
-                        <input type="radio" id="deity-star1" name="deity_rating" value="1">
-                        <label for="deity-star1" title="1 star">&#9733;</label>
+                    <div class="rating-group">
+                        <h5>Deity decoration and priest Services</h5>
+                        <div class="stars">
+                            <input type="radio" id="deity-star5" name="deity_rating" value="5">
+                            <label for="deity-star5" title="5 stars">&#9733;</label>
+                            
+                            <input type="radio" id="deity-star4" name="deity_rating" value="4">
+                            <label for="deity-star4" title="4 stars">&#9733;</label>
+                            
+                            <input type="radio" id="deity-star3" name="deity_rating" value="3">
+                            <label for="deity-star3" title="3 stars">&#9733;</label>
+                            
+                            <input type="radio" id="deity-star2" name="deity_rating" value="2">
+                            <label for="deity-star2" title="2 stars">&#9733;</label>
+                            
+                            <input type="radio" id="deity-star1" name="deity_rating" value="1">
+                            <label for="deity-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="deity_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
                     </div>
-                    <h5>Tilak (naamam) experience</h5>
-                    <div class="stars">
-                        <input type="radio" id="tilak-star5" name="tilak_rating" value="5">
-                        <label for="tilak-star5" title="5 stars">&#9733;</label>
-                        
-                        <input type="radio" id="tilak-star4" name="tilak_rating" value="4">
-                        <label for="tilak-star4" title="4 stars">&#9733;</label>
-                        
-                        <input type="radio" id="tilak-star3" name="tilak_rating" value="3">
-                        <label for="tilak-star3" title="3 stars">&#9733;</label>
-                        
-                        <input type="radio" id="tilak-star2" name="tilak_rating" value="2">
-                        <label for="tilak-star2" title="2 stars">&#9733;</label>
-                        
-                        <input type="radio" id="tilak-star1" name="tilak_rating" value="1">
-                        <label for="tilak-star1" title="1 star">&#9733;</label>
-                      </div>
-                    <h3>2. Speacial Events:</h3>
-                    <h5>Dancing water show (leela jala neeraajanam)</h5>
-                    <div class="stars">
-                        <input type="radio" id="leela-star5" name="leela_rating" value="5">
-                        <label for="leela-star5" title="5 stars">&#9733;</label>
-                        
-                        <input type="radio" id="leela-star4" name="leela_rating" value="4">
-                        <label for="leela-star4" title="4 stars">&#9733;</label>
-                        
-                        <input type="radio" id="leela-star3" name="leela_rating" value="3">
-                        <label for="leela-star3" title="3 stars">&#9733;</label>
-                        
-                        <input type="radio" id="leela-star2" name="leela_rating" value="2">
-                        <label for="leela-star2" title="2 stars">&#9733;</label>
-                        
-                        <input type="radio" id="leela-star1" name="leela_rating" value="1">
-                        <label for="leela-star1" title="1 star">&#9733;</label>
+                    <div class="rating-group">
+                        <h5>Tilak (naamam) experience</h5>
+                        <div class="stars">
+                            <input type="radio" id="tilak-star5" name="tilak_rating" value="5">
+                            <label for="tilak-star5" title="5 stars">&#9733;</label>
+                            
+                            <input type="radio" id="tilak-star4" name="tilak_rating" value="4">
+                            <label for="tilak-star4" title="4 stars">&#9733;</label>
+                            
+                            <input type="radio" id="tilak-star3" name="tilak_rating" value="3">
+                            <label for="tilak-star3" title="3 stars">&#9733;</label>
+                            
+                            <input type="radio" id="tilak-star2" name="tilak_rating" value="2">
+                            <label for="tilak-star2" title="2 stars">&#9733;</label>
+                            
+                            <input type="radio" id="tilak-star1" name="tilak_rating" value="1">
+                            <label for="tilak-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="tilak_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
                     </div>
-                    <h5>Haarathi offered to Bhagavad Ramanujacharya (samatha neeraajanam)</h5>
-                    <div class="stars">
-                        <input type="radio" id="samatha-star5" name="samatha_rating" value="5">
-                        <label for="samatha-star5" title="5 stars">&#9733;</label>
-                        
-                        <input type="radio" id="samatha-star4" name="samatha_rating" value="4">
-                        <label for="samatha-star4" title="4 stars">&#9733;</label>
-                        
-                        <input type="radio" id="samatha-star3" name="samatha_rating" value="3">
-                        <label for="samatha-star3" title="3 stars">&#9733;</label>
-                        
-                        <input type="radio" id="samatha-star2" name="samatha_rating" value="2">
-                        <label for="samatha-star2" title="2 stars">&#9733;</label>
-                        
-                        <input type="radio" id="samatha-star1" name="samatha_rating" value="1">
-                        <label for="samatha-star1" title="1 star">&#9733;</label>
+                    <div class="rating-group">
+                        <h3>2. Speacial Events:</h3>
+                        <h5>Dancing water show (leela jala neeraajanam)</h5>
+                        <div class="stars">
+                            <input type="radio" id="leela-star5" name="leela_rating" value="5">
+                            <label for="leela-star5" title="5 stars">&#9733;</label>
+                            
+                            <input type="radio" id="leela-star4" name="leela_rating" value="4">
+                            <label for="leela-star4" title="4 stars">&#9733;</label>
+                            
+                            <input type="radio" id="leela-star3" name="leela_rating" value="3">
+                            <label for="leela-star3" title="3 stars">&#9733;</label>
+                            
+                            <input type="radio" id="leela-star2" name="leela_rating" value="2">
+                            <label for="leela-star2" title="2 stars">&#9733;</label>
+                            
+                            <input type="radio" id="leela-star1" name="leela_rating" value="1">
+                            <label for="leela-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="leela_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
                     </div>
-                    <h3>3. Amenities and facilities</h3>
-                    <h5>Deposit and collection process of your belongings - Phone, Luggage, Footwear, etc</h5>
-                    <div class="stars">
+                    <div class="rating-group">
+                        <h5>Haarathi offered to Bhagavad Ramanujacharya (samatha neeraajanam)</h5>
+                        <div class="stars">
+                            <input type="radio" id="samatha-star5" name="samatha_rating" value="5">
+                            <label for="samatha-star5" title="5 stars">&#9733;</label>
+                        
+                            <input type="radio" id="samatha-star4" name="samatha_rating" value="4">
+                            <label for="samatha-star4" title="4 stars">&#9733;</label>
+                        
+                            <input type="radio" id="samatha-star3" name="samatha_rating" value="3">
+                            <label for="samatha-star3" title="3 stars">&#9733;</label>
+                        
+                            <input type="radio" id="samatha-star2" name="samatha_rating" value="2">
+                            <label for="samatha-star2" title="2 stars">&#9733;</label>
+                        
+                            <input type="radio" id="samatha-star1" name="samatha_rating" value="1">
+                            <label for="samatha-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="samatha_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h3>3. Amenities and facilities</h3>
+                        <h5>Deposit and collection process of your belongings - Phone, Luggage, Footwear, etc</h5>
+                        <div class="stars">
                         <input type="radio" id="deposit-star5" name="deposit_rating" value="5">
                         <label for="deposit-star5" title="5 stars">&#9733;</label>
                         
@@ -153,8 +186,16 @@
                         <input type="radio" id="deposit-star1" name="deposit_rating" value="1">
                         <label for="deposit-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h5>Drinking water facility</h5>
-                    <div class="stars">
+                    <textarea 
+                        class="low-rating-comment" 
+                        name="deposit_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Drinking water facility</h5>
+                        <div class="stars">
                         <input type="radio" id="water-star5" name="water_rating" value="5">
                         <label for="water-star5" title="5 stars">&#9733;</label>
                         
@@ -170,9 +211,16 @@
                         <input type="radio" id="water-star1" name="water_rating" value="1">
                         <label for="water-star1" title="1 star">&#9733;</label>
                     </div>
-                    
-                    <h5>Wash rooms / Toilet facility</h5>
-                    <div class="stars">
+                    <textarea 
+                        class="low-rating-comment" 
+                        name="water_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Wash rooms / Toilet facility</h5>
+                        <div class="stars">
                         <input type="radio" id="wash-star5" name="wash_rating" value="5">
                         <label for="wash-star5" title="5 stars">&#9733;</label>
                         
@@ -188,9 +236,16 @@
                         <input type="radio" id="wash-star1" name="wash_rating" value="1">
                         <label for="wash-star1" title="1 star">&#9733;</label>
                     </div>
-                    
-                    <h5>Accessibility (Wheelchairs / elevators / steps)</h5>
-                    <div class="stars">
+                    <textarea 
+                        class="low-rating-comment" 
+                        name="wash_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Accessibility (Wheelchairs / elevators / steps)</h5>
+                        <div class="stars">
                         <input type="radio" id="accessibility-star5" name="accessibility_rating" value="5">
                         <label for="accessibility-star5" title="5 stars">&#9733;</label>
                         
@@ -206,9 +261,16 @@
                         <input type="radio" id="accessibility-star1" name="accessibility_rating" value="1">
                         <label for="accessibility-star1" title="1 star">&#9733;</label>
                     </div>
-                    
-                    <h5>Ease of parking, Parking Area</h5>
-                    <div class="stars">
+                    <textarea 
+                        class="low-rating-comment" 
+                        name="accessibility_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Ease of parking, Parking Area</h5>
+                        <div class="stars">
                         <input type="radio" id="parking-star5" name="parking_rating" value="5">
                         <label for="parking-star5" title="5 stars">&#9733;</label>
                         
@@ -222,9 +284,16 @@
                         <label for="parking-star2" title="2 stars">&#9733;</label>
                         
                         <input type="radio" id="parking-star1" name="parking_rating" value="1">
-                        <label for="parking-star1" title="1 star">&#9733;</label>
+                            <label for="parking-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="parking_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
                     </div>
-                    
+                    <div class="rating-group">
                     <h5>Food court , Food options, Ambience, Quality and taste</h5>
                     <div class="stars">
                         <input type="radio" id="food-star5" name="food_rating" value="5">
@@ -242,10 +311,17 @@
                         <input type="radio" id="food-star1" name="food_rating" value="1">
                         <label for="food-star1" title="1 star">&#9733;</label>
                     </div>
-                    
-                    <h5>Shopping area</h5>
-                    <div class="stars">
-                        <input type="radio" id="shopping-star5" name="shopping_rating" value="5">
+                    <textarea
+                        class="low-rating-comment" 
+                        name="food_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Shopping area</h5>
+                        <div class="stars">
+                            <input type="radio" id="shopping-star5" name="shopping_rating" value="5">
                         <label for="shopping-star5" title="5 stars">&#9733;</label>
                         
                         <input type="radio" id="shopping-star4" name="shopping_rating" value="4">
@@ -260,9 +336,16 @@
                         <input type="radio" id="shopping-star1" name="shopping_rating" value="1">
                         <label for="shopping-star1" title="1 star">&#9733;</label>
                     </div>
-                    
-                    <h5>Kid's entertainment area</h5>
-                    <div class="stars">
+                    <textarea
+                        class="low-rating-comment" 
+                        name="shopping_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h5>Kid's entertainment area</h5>
+                        <div class="stars">
                         <input type="radio" id="kids-star5" name="kids_rating" value="5">
                         <label for="kids-star5" title="5 stars">&#9733;</label>
                         
@@ -278,9 +361,17 @@
                         <input type="radio" id="kids-star1" name="kids_rating" value="1">
                         <label for="kids-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>4. Ticketing:</h3>
-                    <h5>Entry pass area and the ease of security entry passes (online ticketing, Kiosk, ticket counters)</h5>
-                    <div class="stars">
+                    <textarea
+                        class="low-rating-comment" 
+                        name="kids_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h3>4. Ticketing:</h3>
+                        <h5>Entry pass area and the ease of security entry passes (online ticketing, Kiosk, ticket counters)</h5>
+                        <div class="stars">
                         <input type="radio" id="entry-star5" name="entry_rating" value="5">
                         <label for="entry-star5" title="5 stars">&#9733;</label>
                         
@@ -296,9 +387,17 @@
                         <input type="radio" id="entry-star1" name="entry_rating" value="1">
                         <label for="entry-star1" title="1 star">&#9733;</label>
                     </div>
-                    <h3>5. Directions:</h3>
-                    <h5>Ease of access and sign board directions within the campus</h5>
-                    <div class="stars">
+                    <textarea
+                        class="low-rating-comment" 
+                        name="entry_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
+                    </div>
+                    <div class="rating-group">
+                        <h3>5. Directions:</h3>
+                        <h5>Ease of access and sign board directions within the campus</h5>
+                        <div class="stars">
                         <input type="radio" id="directions-star5" name="directions_rating" value="5">
                         <label for="directions-star5" title="5 stars">&#9733;</label>
                         
@@ -312,11 +411,19 @@
                         <label for="directions-star2" title="2 stars">&#9733;</label>
                         
                         <input type="radio" id="directions-star1" name="directions_rating" value="1">
-                        <label for="directions-star1" title="1 star">&#9733;</label>
+                            <label for="directions-star1" title="1 star">&#9733;</label>
+                        </div>
+                        <textarea 
+                            class="low-rating-comment" 
+                            name="directions_comment" 
+                            placeholder="Please tell us why you gave a low rating and how we can improve..."
+                            style="display: none;"
+                        ></textarea>
                     </div>
-                    <h3>6. Overall Experience</h3>
-                    <h5>Authenticity, architecture, ambience and aesthetics</h5>
-                    <div class="stars">
+                    <div class="rating-group">
+                        <h3>6. Overall Experience</h3>
+                        <h5>Authenticity, architecture, ambience and aesthetics</h5>
+                        <div class="stars">
                         <input type="radio" id="overall-star5" name="overall_rating" value="5">
                         <label for="overall-star5" title="5 stars">&#9733;</label>
                         
@@ -331,6 +438,13 @@
                         
                         <input type="radio" id="overall-star1" name="overall_rating" value="1">
                         <label for="overall-star1" title="1 star">&#9733;</label>
+                    </div>
+                    <textarea
+                        class="low-rating-comment" 
+                        name="overall_comment" 
+                        placeholder="Please tell us why you gave a low rating and how we can improve..."
+                        style="display: none;"
+                    ></textarea>
                     </div>
                     <label for="feedback">
                     <h5>We would love to hear feedback in your own words too</h5>

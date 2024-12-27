@@ -9,7 +9,6 @@ class FeedbackForm(forms.ModelForm):
 
     def clean(self):
         cleaned_data = super().clean()
-        # Check if all rating fields are filled
         rating_fields = [
             'deity_rating', 'tilak_rating', 'leela_rating', 'samatha_rating',
             'deposit_rating', 'water_rating', 'wash_rating', 'accessibility_rating',
@@ -18,7 +17,12 @@ class FeedbackForm(forms.ModelForm):
         ]
         
         for field in rating_fields:
-            if not cleaned_data.get(field):
-                raise forms.ValidationError(f"Please provide a rating for {field.replace('_rating', '').title()}")
+            rating = cleaned_data.get(field)
+            comment_field = f"{field.replace('_rating', '_comment')}"
+            
+            if rating and rating <= 2 and not cleaned_data.get(comment_field):
+                raise forms.ValidationError(
+                    f"Please provide feedback for the low rating of {field.replace('_rating', '').title()}"
+                )
         
         return cleaned_data

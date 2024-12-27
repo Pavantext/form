@@ -30,6 +30,23 @@ class Feedback(models.Model):
     feedback = models.TextField(blank=True, null=True)
     contact = models.TextField(blank=True, null=True)
 
+    # Add new fields for low rating comments
+    deity_comment = models.TextField(blank=True, null=True)
+    tilak_comment = models.TextField(blank=True, null=True)
+    leela_comment = models.TextField(blank=True, null=True)
+    samatha_comment = models.TextField(blank=True, null=True)
+    deposit_comment = models.TextField(blank=True, null=True)
+    water_comment = models.TextField(blank=True, null=True)
+    wash_comment = models.TextField(blank=True, null=True)
+    accessibility_comment = models.TextField(blank=True, null=True)
+    parking_comment = models.TextField(blank=True, null=True)
+    food_comment = models.TextField(blank=True, null=True)
+    shopping_comment = models.TextField(blank=True, null=True)
+    kids_comment = models.TextField(blank=True, null=True)
+    entry_comment = models.TextField(blank=True, null=True)
+    directions_comment = models.TextField(blank=True, null=True)
+    overall_comment = models.TextField(blank=True, null=True)
+
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
