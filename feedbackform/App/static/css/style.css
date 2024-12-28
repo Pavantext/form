@@ -186,6 +186,12 @@ h5 {
     transition: all 0.2s ease;
 }
 
+.highlight {
+    color: white;
+    font-weight: bold;
+}
+
+
 .stars input:checked ~ label,
 .stars input:checked ~ label ~ label {
     color: #dda035;
