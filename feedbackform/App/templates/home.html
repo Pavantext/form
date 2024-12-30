@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <title>Welcome - Statue of Equality</title>
+</head>
+<body>
+    <div class="container">
+        <section class="welcome-section">
+            <h2>Welcome to the Statue of Equality</h2>
+            <form action="{% url 'feedback_form' %}" method="GET" class="welcome-form">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Enter your name" required>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                    <input type="email" name="email" placeholder="Enter your email">
+                    <input type="text" name="location" placeholder="Enter your location">
+                </div>
+                <button type="submit" class="submit-btn">Continue to Feedback</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

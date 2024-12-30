@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'images/favicon.ico' %}">
     <title>Thank You - Statue of Equality</title>
@@ -12,6 +12,7 @@
     <div class="container">
         <section class="thank-you-section">
             <h2>🙏 Thank You for Your Feedback!</h2>
+            <p>Your feedback helps us improve our services.</p>
             <p>Please follow us on social media</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/StatueOfEquality" target="_blank" class="social-link">
@@ -24,8 +25,9 @@
                     <img src="{% static 'images/twitter.png' %}" alt="Twitter">
                 </a>
             </div>
+            <br>
+            <a href="{% url 'home' %}" class="back-button">Back to Home</a>
         </section>
-        
     </div>
 </body>
 </html> 

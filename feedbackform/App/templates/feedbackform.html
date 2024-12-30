@@ -14,9 +14,11 @@
         
         <section>
             {% if username %}
-                <h2>Thank You <span class="highlight">{{ username }}</span>, for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+                <h2>Thank You <span class="highlight">{{ username|title }}</span>, for visiting the Statue of Equality</h2>
+                <p>Please take 1 minute to share your feedback</p>
             {% else %}
-                <h2>Thank you for visiting the Statue of Equality, Please take 1 minute survey to share your feedback</h2>
+                <h2>Thank you for visiting the Statue of Equality</h2>
+                <p>Please take 1 minute to share your feedback</p>
             {% endif %}
             
             <div id="rating-guide">
