@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const rating = parseInt(this.value);
                 const ratingName = this.name.replace('_rating', '').replace('-', ' ');
                 
-                if (rating <= 3) {
+                if (rating <= 2) {
                     commentBox.style.display = 'block';
                     commentBox.required = true;
                     commentBox.placeholder = `Please tell us why you gave ${rating} star${rating === 1 ? '' : 's'} for ${ratingName} and how we can improve...`;
