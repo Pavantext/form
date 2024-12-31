@@ -22,6 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure--p+%end2u-5_83m)v+=qdy2n2ludhura_)2ddgnk68ij&*msoh'
 
+# Add this near your other security settings
+from cryptography.fernet import Fernet
+ENCRYPTION_KEY = Fernet.generate_key()  # Generate this once and save it
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
