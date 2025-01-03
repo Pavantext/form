@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from App.views import send_bulk_notifications, test_notification
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('App.urls')),
+    path('api/send-notifications/', send_bulk_notifications, name='send_notifications'),
+    path('api/test-notification/', test_notification, name='test_notification'),
 ]
